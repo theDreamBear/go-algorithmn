@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"mycomparator"
 )
 
 /*
@@ -64,20 +65,20 @@ func swap(source []int, lhs, rhs int) {
 
 type QuickComparator func(int, int) bool
 
-func bigger(lhs, rhs int) bool {
-	if lhs > rhs {
-		return true
-	} else {
-		return false
-	}
-}
+//func bigger(lhs, rhs int) bool {
+//	if lhs > rhs {
+//		return true
+//	} else {
+//		return false
+//	}
+//}
 
 func Asc(lhs, rhs int) bool {
-	return bigger(lhs, rhs)
+	return mycomparator.Bigger(lhs, rhs)
 }
 
 func Desc(lhs, rhs int) bool {
-	return bigger(rhs, lhs)
+	return mycomparator.Bigger(rhs, lhs)
 }
 
 func main() {

@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"mycomparator"
+)
 
 /*
  //小堆
@@ -61,24 +64,8 @@ func heapUp(source []int, i int, comparator2 comparator) {
 
 type comparator func(int, int) bool
 
-func Bigger(lhs, rhs int) bool {
-	if lhs > rhs {
-		return true
-	} else {
-		return false
-	}
-}
-
-func Lesser(lhs, rhs int) bool {
-	if lhs < rhs {
-		return true
-	} else {
-		return false
-	}
-}
-
 func main() {
 	var source = []int{1, 4, 2, 3}
-	HeapSort(source, Lesser)
+	HeapSort(source, mycomparator.Lesser)
 	//fmt.Println(source)
 }
